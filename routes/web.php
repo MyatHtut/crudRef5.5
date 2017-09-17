@@ -14,11 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-//Route::resource('test', "PostController");
-//Route::get('index', "PostController@index");
-//Route::get('index/edit/{id}', "PostController@edit");
-//Route::PATCH('index/update/{id}', "PostController@update");
 Route::get('index', "PostController@index");
 Route::get('index/show/{id}', "PostController@show");
 Route::get('index/edit/{id}', "PostController@edit")->middleware('auth');
